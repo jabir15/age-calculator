@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#854dff">
+  <meta name="description" content="This challenge is designed to sharpen your JavaScript and form validation skills. Working with dates in JavaScript can be tricky, so this will be a nice test!  ">
+  <meta name="keywords" content="frontendmentor challenge, age calculator app, frontendmentor age calculator, javascript age calculate, jquery frontendmentor challenge, frontendmentor challenge demo">
+  <meta name="author" content="Rajamanickam">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <title>Age calculator demo | Frontend Mentor challenge</title>
+</head>
+<body>
+<main>
+  <section>
+    <div class="calculator-wrap">
+      <div class="calculate-input">
+        <div class="input-set">
+          <label for="date" id="labelDate">DAY</label>
+          <input type="number" id="date" placeholder="DD" value="">
+          <span id="errorDate" class="error"></span>
+        </div>
+        <div class="input-set">
+          <label for="month" id="labelMonth">MONTH</label>
+          <input type="number" id="month" placeholder="MM" value="">
+          <span id="errorMonth" class="error"></span>
+        </div>
+        <div class="input-set">
+          <label for="year" id="labelYear">YEAR</label>
+          <input type="number" id="year" placeholder="YYYY" value="">
+          <span id="errorYear" class="error"></span>
+        </div>
+      </div>
+      <hr>
+      <div class="calculate-btn">
+        <button id="calculate"></button>
+      </div>
+
+      <div class="age-result">
+        <p><span id="resultYears">--</span> years</p>
+        <p><span id="resultMonths">--</span> months</p>
+        <p><span id="resultDays">--</span> days</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="attribution" style="display: none;">
+  Developed by <a href="https://www.youtube.com/@rajamanickamweb/" target="_blank">rajamanickam</a>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

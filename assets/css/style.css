@@ -1,0 +1,182 @@
+@font-face {
+    font-family: "Poppins Regular";
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Poppins Bold";
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Poppins ExtraBold";
+    src: url(../fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+body {
+    font-family: "Poppins Regular";
+}
+
+section {
+    background-color: #ffffff;
+    padding: 60px 30px;
+    -webkit-border-radius: 10px;
+    -webkit-border-bottom-right-radius: 68px;
+    -moz-border-radius: 10px;
+    -moz-border-radius-bottomright: 68px;
+    border-radius: 25px;
+    border-bottom-right-radius: 68px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: -10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    -webkit-transform: perspective(800px) translateZ(-300px);
+    background: url(../images/icon-arrow.svg) no-repeat;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-position: center;
+    background-color: #854dff;
+    outline: none;
+    border: none;
+    padding: 20px;
+    background-size: 2rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    transition: .2s;
+    background-color: hsl(0, 0%, 8%);
+}
+
+
+/* input  */
+.calculate-input {
+    width: 100%;
+}
+
+.input-set {
+    display: inline-grid;
+    width: 32%;
+}
+
+input {
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 5px;
+    padding: 15px 10px;
+    width: 70%;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+input:focus {
+    border-color: hsl(259, 100%, 65%);
+}
+
+label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: hsl(0, 1%, 44%);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input::placeholder,
+input[type="number"] {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.calculate-btn {
+    position: relative;
+    float: right;
+}
+
+.calculate-btn button {
+    position: absolute;
+    top: -16px;
+    right: -9px;
+    bottom: 0;
+    margin: auto;
+}
+
+hr {
+    color: hsl(0, 0%, 86%);
+    margin-top: 27px;
+}
+
+.age-result p {
+    font-family: "Poppins ExtraBold";
+    font-size: 55px;
+    margin: 0;
+}
+
+.age-result p span {
+    color: hsl(259, 100%, 65%)
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.error-label {
+    color: red;
+}
+
+.error-input {
+    border: 1px solid red;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-width: 767px) {
+    .calculate-btn button {
+        right: 132px;
+    }
+
+    section {
+        width: 80%;
+        margin: auto;
+    }
+
+    .input-set {
+        width: 32%;
+    }
+
+    .calculate-input {
+        margin-bottom: 3rem;
+    }
+
+    .age-result {
+        margin-top: 3rem;
+    }
+}
+

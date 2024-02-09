@@ -1,3 +1,7 @@
+window.onload = function() {
+  document.getElementById("calculate").click();
+}
+
 $(document).ready(function() {
   $("#calculate").click(function() {
     // Clear previous error messages and styles

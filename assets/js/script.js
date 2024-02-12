@@ -80,8 +80,6 @@ $(document).ready(function() {
     $(".error-label").removeClass("error-label");
     $(".error-input").removeClass("error-input");
   }
-});
 
-window.onpageshow = function() {
-  document.getElementById("calculate").click();
-}
+  $("#calculate").click();
+});

@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onpageshow = function() {
   document.getElementById("calculate").click();
 }
 

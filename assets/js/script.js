@@ -82,6 +82,6 @@ $(document).ready(function() {
   }
 });
 
-window.load = function() {
+window.onpageshow = function() {
   document.getElementById("calculate").click();
 }

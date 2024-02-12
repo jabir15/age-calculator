@@ -1,7 +1,3 @@
-window.onpageshow = function() {
-  document.getElementById("calculate").click();
-}
-
 $(document).ready(function() {
   $("#calculate").click(function() {
     // Clear previous error messages and styles
@@ -85,3 +81,7 @@ $(document).ready(function() {
     $(".error-input").removeClass("error-input");
   }
 });
+
+window.load = function() {
+  document.getElementById("calculate").click();
+}

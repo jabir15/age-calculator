@@ -58,7 +58,7 @@ $(document).ready(function() {
     resetErrors();
 
     const now = new Date();
-    $("year").attr({"max" : now.getFullYear()});
+    $("#year").attr({"max" : now.getFullYear()});
     
     
     let ageInMilliseconds = now - dob;

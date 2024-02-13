@@ -58,6 +58,9 @@ $(document).ready(function() {
     resetErrors();
 
     const now = new Date();
+    $("year").attr({"max" : now.getFullYear()});
+    
+    
     let ageInMilliseconds = now - dob;
 
     // Calculate the age in years, months, and days

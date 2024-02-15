@@ -40,6 +40,7 @@ section {
 
 button {
   -webkit-transform: perspective(800px) translateZ(-300px);
+  transform: perspective(800px) translateZ(-300px);
   background: url(../images/icon-arrow.svg) no-repeat;
   width: 70px;
   height: 70px;

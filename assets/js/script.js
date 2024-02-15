@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  $("#calculate").click(function() {
+$(document).ready(function () {
+  $("#calculate").click(function () {
     // Clear previous error messages and styles
     resetErrors();
 
@@ -47,7 +47,6 @@ $(document).ready(function() {
     // Check if the entered date is a valid date
     const dob = new Date(year, month - 1, day);
     if (isNaN(dob.getTime()) || dob > new Date()) {
-
       $("#errorYear").html("Must be a valid past");
       $("#labelYear").addClass("error-label");
       $("#year").addClass("error-input");
@@ -58,9 +57,8 @@ $(document).ready(function() {
     resetErrors();
 
     const now = new Date();
-    $("#year").attr({"max" : now.getFullYear()});
-    
-    
+    $("#year").attr({ max: now.getFullYear() });
+
     let ageInMilliseconds = now - dob;
 
     // Calculate the age in years, months, and days
@@ -72,9 +70,22 @@ $(document).ready(function() {
     age.days = Math.floor(ageInMilliseconds / (1000 * 60 * 60 * 24));
 
     // Update the result in the <p> elements
-    $("#resultYears").html(age.years);
-    $("#resultMonths").html(age.months);
-    $("#resultDays").html(age.days);
+    $(".age-result p:nth-child(1)").html(
+      age.years == 1
+        ? '<span id="resultYears">' + age.years.toString() + "</span> year"
+        : '<span id="resultYears">' + age.years.toString() + "</span> years"
+    );
+
+    $(".age-result p:nth-child(2)").html(
+      age.months == 1
+        ? '<span id="resultMonths">' + age.months.toString() + "</span> month"
+        : '<span id="resultMonths">' + age.months.toString() + "</span> months"
+    );
+    $(".age-result p:nth-child(3)").html(
+      age.days == 1
+        ? '<span id="resultDays">' + age.days.toString() + "</span> day"
+        : '<span id="resultDays">' + age.days.toString() + "</span> days"
+    );
   });
 
   // Function to clear errors and styles
